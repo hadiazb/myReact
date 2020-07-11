@@ -155,3 +155,5 @@ Para ello vas a copiar las tareas que te presento acontinuación en los scripts
   }
 }
 ```
+
+Luego de crear tus tareas lo primero que debes hacer es ir a tu terminal y ejecutar el script `npm run build`, con esto se crearan los archivos que van aservir tu aplicación del lado de frontend, ahora lo que debes hacer es ejecutar tu segunda tarea que es `npm run build:dev` para crear un entorno de desarrollo con el servidor que configuraste en el archivo webpack.config.js.
