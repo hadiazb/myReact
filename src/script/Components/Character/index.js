@@ -1,26 +1,40 @@
-import React from 'react';
-import { Box, Img, Data, Subtitle, Title } from './style';
+import React, { Link } from 'react';
+import { Box, Img, Data, Subtitle, Title, Subsubtitle, Anchor } from './style';
 
-export const Character = () => {
+const DEFAULT_IMG =
+	'https://rickandmortyapi.com/api/character/avatar/21.jpeg';
+
+export const Character = ({
+	cover = DEFAULT_IMG,
+	status = 'Status',
+	species = 'Species',
+	name = 'Name',
+	location = 'Location',
+	gender = 'Gender',
+	pathOne = '#',
+	pathTwo = '#',
+}) => {
 	return (
 		<Box>
-			<Img src='https://rickandmortyapi.com/api/character/avatar/21.jpeg' />
+			<Img src={cover} />
 			<Data>
-				<Title>Name</Title>
+				<Title>{name}</Title>
 				<Subtitle>
-					<span>Status-Species</span>
+					<Subsubtitle>
+						{status}-{species}
+					</Subsubtitle>
 				</Subtitle>
 				<Subtitle>
-					<span>Last known Location</span>
+					<Subsubtitle>Last Location</Subsubtitle>
 				</Subtitle>
 				<Subtitle>
-					<a href='#'>Location</a>
+					<Anchor to={pathOne}>{location}</Anchor>
 				</Subtitle>
 				<Subtitle>
-					<span>First seen in:</span>
+					<Subsubtitle>Gender</Subsubtitle>
 				</Subtitle>
 				<Subtitle>
-					<a href='#'>Episode</a>
+					<Anchor to={pathTwo}>{gender}</Anchor>
 				</Subtitle>
 			</Data>
 		</Box>

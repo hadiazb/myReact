@@ -43,7 +43,6 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .05);
     overflow-x: hidden;
     min-height: 100vh;
-    padding-bottom: 10px;
     background-color:  #C2B8B4 ;
   }
 `;

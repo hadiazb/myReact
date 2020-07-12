@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { Link } from "@reach/router";
+
+export const Anchor = styled(Link)`
+	margin-left: 10px;
+  color: rgba(255, 255, 255, 0.8);
+`;
 
 export const Box = styled.div`
 	min-width: 280px;
@@ -27,11 +33,17 @@ export const Data = styled.div`
 
 export const Subtitle = styled.h4`
 	margin: 5px;
-  font-size: .8em;
+  font-size: .7em;
   color: rgba(255, 255, 255, 0.8);
 `;
 
 export const Title = styled.h4`
 	margin: 8px 10px;
-  font-size: 1.4em;
+  font-size: 1.2em;
+`;
+
+export const Subsubtitle = styled.span`
+	margin: 8px 10px;
+  font-size: .8em;
+	color: rgba(255, 255, 255, 0.4);
 `;
