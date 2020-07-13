@@ -1,4 +1,4 @@
-import React, { Link } from 'react';
+import React from 'react';
 import { Box, Img, Data, Subtitle, Title, Subsubtitle, Anchor } from './style';
 
 const DEFAULT_IMG =

@@ -13,7 +13,8 @@ function useCharacterData() {
 			.then((response) => {
 				setCharacter(response.results);
 				setLoading(false);
-			});
+			})
+			.catch((error) => console.error());
 	}, []);
 	return { character, loading };
 }
@@ -22,20 +23,24 @@ export const ListOfCategory = () => {
 	const { character, loading } = useCharacterData();
 	return (
 		<List>
-			{character.map((character) => (
-				<li key={character}>
-          <Character
-            cover={character.image}
-            status={character.status}
-            species={character.species}
-            name={character.name}
-            location={character.origin.name}
-						gender={character.gender}
-						pathOne='#'
-						pathTwo='#'
-          />
-				</li>
-			))}
+			{loading ? (
+				<h1>Loading...</h1>
+			) : (
+				character.map((character) => (
+					<li key={character.id}>
+						<Character
+							cover={character.image}
+							status={character.status}
+							species={character.species}
+							name={character.name}
+							location={character.origin.name}
+							gender={character.gender}
+							pathOne='#'
+							pathTwo='#'
+						/>
+					</li>
+				))
+			)}
 		</List>
 	);
 };
